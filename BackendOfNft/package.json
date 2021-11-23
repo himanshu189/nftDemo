@@ -12,6 +12,7 @@
   "dependencies": {
     "@ethereumjs/tx": "^3.3.2",
     "@sendgrid/mail": "^7.4.7",
+    "abi-decoder": "^2.4.0",
     "bcryptjs": "^2.4.3",
     "big-number": "^2.0.0",
     "bigi": "^1.4.2",

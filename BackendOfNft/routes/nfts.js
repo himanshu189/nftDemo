@@ -468,7 +468,7 @@ const contract = new web3.eth.Contract(contractABI, contractAddress);
 router.post("/mintToken", async (req, res) => {
   const {url,value}=req.body;
 
-  // console.log(typeof(url))
+  console.log(typeof(url))
 
   let nonce = await web3.eth.getTransactionCount(owner); //nonce is one time number
   const NetworkId = await web3.eth.net.getId();
@@ -499,7 +499,7 @@ router.post("/mintToken", async (req, res) => {
     web3.eth
     .sendSignedTransaction("0x" + transaction.serialize().toString("hex"))
     .on("receipt",async (data) => {
-  console.log('success',data)
+  console.log('success',data.logs)
       // res.send(data) ;
       
     })
