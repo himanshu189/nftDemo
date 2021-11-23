@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import LoginFirst from "./Components/LoginFirst";
 import ForgotPasswordPage from "./Components/ForgetPassword";
 import ResetPassword from "./Components/Resetpassword";
+import Home from "./Components/Home";
 
 function App() {
   const [token, setToken] = useState();
@@ -29,6 +30,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={SignUp} />
           <Route exact path="/signup" component={SignUp} />
+
+          <Route exact path="/home" component={Home} />
 
           <Route
             exact
