@@ -10,6 +10,7 @@ dotenv.config();
 app.use(cors());
 
 const userRoute = require("./routes/user");
+const nftRoute = require("./routes/nfts");
 
 // const mongoURI = "mongodb://localhost:27017/BlockchainPOC";
 
@@ -29,5 +30,6 @@ mongoose
 //middlewares
 app.use(bodyParser.json());
 app.use("/api/user", userRoute);
+app.use("/api/token", nftRoute);
 
 app.listen(8080, () => console.log("Server running at 8080..."));
