@@ -1,0 +1,29 @@
+.main-form {
+  padding: 8%;
+  border: solid black 2px;
+  border-radius: 25px;
+}
+
+.form-div {
+  /* padding-top: 10%; */
+  /* 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow-x: hidden;
+}
+
+/* 
+.input-box {
+  width: 70% !important ;
+} */
+
+Form {
+  /* background-color: black; */
+  background-color: #03203c;
+  color: white;
+}
+
+.registr {
+  padding-top: 80px;
+}
