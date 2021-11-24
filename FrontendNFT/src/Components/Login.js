@@ -65,7 +65,7 @@ const Login = ({ flag, setFlag }) => {
 
   return (
     <div>
-      <h1 className="text-center  registr"> Login Here</h1>
+      <h1 className="text-center  registr form-heading"> Login Here</h1>
       <div className="form-div">
         <div className="row">
           <div className="col-md-3 sm-1"></div>

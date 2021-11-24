@@ -22,7 +22,7 @@ const MyNav = ({ flag, setFlag }) => {
     <>
       <Navbar className="nav-bar" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="">Test App For Blockchain</Navbar.Brand>
+          <Navbar.Brand href="">NFT Blockchain</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link></Nav.Link>
             <Nav.Link></Nav.Link>

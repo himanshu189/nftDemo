@@ -68,14 +68,18 @@
 }
 
 .input-pass {
-  width: 30%;
+  width: 80%;
 }
 
 .reg-h1 {
   color: rgb(207, 199, 199);
-  padding-top: 50px;
+  padding-top: 200px;
 }
 
 .formName {
   color: white;
+}
+
+.img-div {
+  padding-top: 60px;
 }

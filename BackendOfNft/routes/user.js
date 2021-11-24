@@ -169,6 +169,7 @@ router.get("/confirm/:token", async (req, res) => {
 });
 
 router.post("/forgotPassword", async (req, res) => {
+  //add a check for the email , is email already registered or not
   const email = req.body.email;
   console.log(email);
 

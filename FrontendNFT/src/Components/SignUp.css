@@ -18,7 +18,7 @@
   width: 70% !important ;
 } */
 
-Form {
+.main-form {
   /* background-color: black; */
   background-color: #313233;
   color: white;
@@ -26,4 +26,8 @@ Form {
 
 .registr {
   padding-top: 80px;
+}
+
+.form-heading {
+  color: white;
 }

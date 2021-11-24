@@ -53,12 +53,12 @@ const SignUp = () => {
 
   return (
     <div>
-      <h1 className="text-center  registr"> Register Here </h1>
-      <div className="form-div  ">
+      <h1 className="text-center  registr form-heading"> Register Here </h1>
+      <div className="form-div">
         <div className="row">
           <div className="col-md-3  sm-1"></div>
           <div className="col-md-6 sm-10">
-            <Form className="main-form ">
+            <Form className="main-form">
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control

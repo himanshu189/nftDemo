@@ -6,6 +6,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./Details.css";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import forgot from "../images/forgott.jpg";
+
+toast.configure();
+
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState();
 
@@ -15,7 +22,7 @@ const ForgotPasswordPage = () => {
 
   const mailAPIcall = () => {
     if (!email || email.length < 5) {
-      alert("Enter correct email address");
+      toast.error("Enter correct email address");
       return;
     }
 
@@ -23,32 +30,44 @@ const ForgotPasswordPage = () => {
       axios
         .post("http://localhost:8080/api/user/forgotPassword", { email: email })
         .then((res) => {
-          console.log("forgoooooooooootttttttttttttttttttttt", res);
-          if (res.status == 200) alert("Mail Sent , Please Check your email");
+          if (res.status == 200)
+            toast.info("Mail Sent , Please Check your email");
         })
         .catch((err) => {
           console.log(err);
-          alert(err);
+          toast.error(err);
         });
   };
 
   return (
     <div className="text-center">
-      <h1 className="reg-h1">Please Enter Your Registered Email id Below</h1>
-      <div className="forgetpassdiv">
-        <input
-          className="input-pass"
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter Your email here"
-        />
-        <Button
-          variant="warning"
-          style={{ marginLeft: "4px" }}
-          onClick={mailAPIcall}
-        >
-          Send Mail
-        </Button>
+      <div className="row">
+        <div className="col-md-6 img-div">
+          <img src={forgot} style={{ width: "70%" }} />
+        </div>
+
+        <div className="col-md-5">
+          <h1 className="reg-h1">
+            Please Enter Your Registered Email id Below
+          </h1>
+          <div className="forgetpassdiv">
+            <input
+              className="input-pass"
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter Your email here"
+            />
+            <Button
+              variant="warning"
+              style={{ marginLeft: "4px" }}
+              onClick={mailAPIcall}
+            >
+              Send Mail
+            </Button>
+          </div>
+        </div>
+
+        <div className="col-md-1"></div>
       </div>
     </div>
   );

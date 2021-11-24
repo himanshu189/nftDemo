@@ -9,6 +9,8 @@ import "./Details.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import resetPassImg from "../images/reset-password2.jpg";
+
 toast.configure();
 
 const ResetPassword = () => {
@@ -41,21 +43,29 @@ const ResetPassword = () => {
 
   return (
     <div className="text-center">
-      <h1 className="reg-h1">Please Enter Your New Password Here .</h1>
-      <div className="forgetpassdiv">
-        <input
-          type="text"
-          className="input-pass"
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter new Password"
-        />
-        <Button
-          variant="warning"
-          style={{ marginLeft: "4px" }}
-          onClick={updatePassword}
-        >
-          Done
-        </Button>
+      <div className="row">
+        <div className="col-md-6">
+          <h1 className="reg-h1">Please Enter Your New Password Here .</h1>
+          <div className="forgetpassdiv">
+            <input
+              type="text"
+              className="input-pass"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter new Password"
+            />
+            <Button
+              variant="warning"
+              style={{ marginLeft: "4px" }}
+              onClick={updatePassword}
+            >
+              Done
+            </Button>
+          </div>
+        </div>
+        <div className="col-md-6 img-div">
+          <img src={resetPassImg} style={{ width: "75%" }} />
+        </div>
+        {/* <div className="col-md-1"></div> */}
       </div>
     </div>
   );
